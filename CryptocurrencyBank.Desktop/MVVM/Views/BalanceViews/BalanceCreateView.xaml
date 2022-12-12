@@ -1,0 +1,18 @@
+﻿<Window x:Class="CryptocurrencyBank.Desktop.MVVM.Views.BalanceViews.BalanceCreateView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CryptocurrencyBank.Desktop.MVVM.Views.BalanceViews"
+        mc:Ignorable="d"
+        Title="BalanceCreateView" Height="350" Width="400">
+    <Grid>
+        <Label FontSize="20" Content="Value:" HorizontalAlignment="Left" Margin="83,125,0,0" VerticalAlignment="Top"/>
+        <TextBox FontSize="20" HorizontalAlignment="Center" Margin="0,129,0,0" TextWrapping="Wrap" Text="{Binding Balance.Value, ValidatesOnExceptions=True, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="120"/>
+        <Label FontSize="20" Content="Description:" HorizontalAlignment="Left" Margin="30,171,0,0" VerticalAlignment="Top"/>
+        <TextBox FontSize="20" HorizontalAlignment="Center" Margin="0,175,0,0" TextWrapping="Wrap" Text="{Binding Balance.Description, ValidatesOnExceptions=True, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="120"/>
+
+        <Button Command="{Binding Create}" Margin="15,261,240,25" Content="Create" FontSize="20" Background="AliceBlue"/>
+        <Button Command="{Binding Clear}" Margin="200,261,55,25" Content="Clear" FontSize="20" Background="AliceBlue"/>
+    </Grid>
+</Window>

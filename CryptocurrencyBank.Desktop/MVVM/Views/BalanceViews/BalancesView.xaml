@@ -1,0 +1,24 @@
+﻿<Window x:Class="CryptocurrencyBank.Desktop.MVVM.Views.BalanceViews.BalancesView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:vm="clr-namespace:CryptocurrencyBank.Desktop.MVVM.ViewModels.Balances"
+        xmlns:local="clr-namespace:CryptocurrencyBank.Desktop.MVVM.Views.BalanceViews"
+        mc:Ignorable="d"
+        Title="BalancesView" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="0.2*"/>
+        </Grid.RowDefinitions>
+
+        <DataGrid ItemsSource="{Binding Balances}" SelectedItem="{Binding Selected}" AutoGenerateColumns="True" CanUserAddRows="False"/>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="1">
+            <Button Width="100" Margin="10" Command="{Binding Create}" Content="Create" FontSize="20"/>
+            <Button Width="100" Margin="10" Command="{Binding Update}" Content="Update" FontSize="20"/>
+            <Button Width="100" Margin="10" Command="{Binding Delete}" Content="Delete" FontSize="20"/>
+        </StackPanel>
+    </Grid>
+</Window>
